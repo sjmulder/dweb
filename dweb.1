@@ -1,0 +1,43 @@
+.Dd June 5, 2018
+.Dt DWEB 1
+.Os
+.Sh NAME
+.Nm dweb
+.Nd command line web browser
+.Sh SYNOPSIS
+.Nm
+.Sh DESCRIPTION
+.Nm
+is a nonvisual command line web browser.
+It is to browsers like
+.Xr lynx 1 as
+.Xr ex 1 is to
+.Xr vim 1 .
+.Pp
+The following commands are supported:
+.Bl -tag -width Ds
+.It Ar url
+Output a text version of the given URL with links shown as footnotes.
+.It Ar number
+Follow a link from the last page, displaying it in the same manner.
+.It Ic q
+Quit
+.Nm .
+.El
+.Sh ENVIRONMENT
+The following environment variables are read:
+.Bl -tag -width Ds
+.It Ev BROWSER
+Invoked with
+.Li -dump -o display_link_num=1
+to fetch and format web pages.
+Must be compatible with the default,
+.Xr w3m 1 .
+.It Ev PAGER
+Used to display web pagese.
+Defaults to
+.Xr more 1 .
+.El
+.Sh AUTHORS
+.An Sijmen J. Mulder
+.Aq Mt ik@sjmulder.nl .
